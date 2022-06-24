@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "946795904366",
+    "firebase_url": "https://login-7d1a8.firebaseio.com",
+    "project_id": "login-7d1a8",
+    "storage_bucket": "login-7d1a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946795904366:android:b856c0ce76f6838332d57f",
+        "android_client_info": {
+          "package_name": "com.mytestappjogjapunya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946795904366-isb21u1vraeu90l3vknonfr2rcn9q3ih.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mytestappjogjapunya",
+            "certificate_hash": "7ab16eb1251960ae14802352854a88e249a89512"
+          }
+        },
+        {
+          "client_id": "946795904366-rjvuanai82kc5n7ul2ga17mto7fg8geb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOiw3pLaWDyu6_SIzWbtn604jvFttGaWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946795904366-rjvuanai82kc5n7ul2ga17mto7fg8geb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946795904366:android:087d6f1b9fbe7ff832d57f",
+        "android_client_info": {
+          "package_name": "com.notepad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946795904366-rjvuanai82kc5n7ul2ga17mto7fg8geb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOiw3pLaWDyu6_SIzWbtn604jvFttGaWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946795904366-rjvuanai82kc5n7ul2ga17mto7fg8geb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
