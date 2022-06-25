@@ -28,22 +28,26 @@ class Home extends Component {
 async  componentDidMount() {
   try {
     const jsonValue = await AsyncStorage.getItem('@todos')
-    this.setState({
-      todos:JSON.parse(jsonValue)
-    })
+    if(jsonValue != null){
+      this.setState({
+        todos:JSON.parse(jsonValue)
+      })
+    }
+    
   } catch(e) {
   }
     setTimeout(() => {
       this.setState({
         isloading: false
       })
-    }, 3000);
+    }, 5000);
   }
 
   listTodos = () => {
     return this.state.todos.map((value, index) => {
       return (
         <TouchableOpacity
+        onPress={() => alert(`${value.title}`)}
         onLongPress={() => this.delete(value.id)}
         key={index} style={{
           height: 100,
@@ -171,13 +175,18 @@ async  componentDidMount() {
         <Text style={{ fontSize: 30, color: "#000", fontWeight: "bold", textAlign: "center", marginTop: 20 }}> What's ToDo </Text>
         <View style={{ flex: 1, margin: 10 }}>
           <ScrollView>
-            {this.state.isloading ? <View style={{
+            {
+            
+            this.state.isloading ? <View style={{
               flex:1,
               justifyContent:"center",
               alignItems:"center"
             }}>
               <ActivityIndicator/>
-            </View> : this.state.todos.length == 0 ? <Text style={{textAlign:"center"}}>Tidak Ada Data</Text>: this.listTodos() }
+            </View>
+             : 
+             
+             this.state.todos.length == 0 ? <Text style={{textAlign:"center"}}>Tidak Ada Data</Text>: this.listTodos() }
           </ScrollView>
         </View>
         <View style={{ height: 100, width: "100%", backgroundColor: "transparent", alignItems: "center", justifyContent: "center", position: "absolute", bottom: 3 }}>
@@ -317,7 +326,7 @@ async  componentDidMount() {
                 open={this.state.openalarm}
                 date={this.state.alarm}
                 onConfirm={(date) => {
-                  this.setState({ openalarm: !this.state.openalarm, alarm: `${this.state.alarm.getHours() < 10 ? "0" + this.state.alarm.getHours() : this.state.alarm.getHours()}:${this.state.alarm.getMinutes() < 10 ? "0" + this.state.alarm.getMinutes() : this.state.alarm.getMinutes()}` })
+                  this.setState({ openalarm: !this.state.openalarm, alarm: date})
                   console.log(date)
                 }}
                 onCancel={() => {
